@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogCard from "../components/BlogCard.astro";
+const blogs = Object.values(import.meta.glob("../**/*.md", {eager: true}))
+---
+
+
+
+<Layout title="Blog">
+    <main class="w-full flex flex-col items-center">
+
+        <div class="w-6/12 flex flex-col gap-8">
+            {
+                blogs.map(b => (<BlogCard
+                        title={b.frontmatter.title}
+                        url={b.url}
+                        word_count={b.rawContent().split(" ").length}
+                />))
+            }
+        </div>
+    </main>
+</Layout>

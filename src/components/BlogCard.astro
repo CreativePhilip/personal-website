@@ -1,0 +1,25 @@
+---
+interface Props {
+    title: string
+    url: string
+
+    word_count: number
+}
+
+
+const props = Astro.props
+---
+
+<a href={props.url}>
+    <div class="p-4 border border-solid rounded-xl border-background-500 hover:border-2 transition-all <duration-150></duration-150>">
+        <h2 class="text-background-200 text-2xl">{props.title}</h2>
+
+        <p class="text-background-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi, commodi consequuntur doloribus ducimus eius ipsum non odio omnis quos reprehenderit sapiente soluta tenetur unde velit, vitae voluptatum? Dolores, illo!
+        </p>
+
+        <div class="text-background-200 flex mt-3">
+            <span class="ml-auto">{props.word_count} words</span>
+        </div>
+    </div>
+</a>
