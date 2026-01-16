@@ -10,8 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.6",
     "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.12.3",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
-  }
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15"
+  },
+  "packageManager": "pnpm@8.6.1+sha1.435b3c83c7de5c455ad80fd63ee7ecf3b67b949b"
 }
